@@ -14,3 +14,7 @@ private
 *.sublime*
 *.swp
 **/*.test
+
+/vendor
+/vendor-new
+!/vendor/.gitkeep

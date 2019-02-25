@@ -3069,7 +3069,7 @@ func (f *Fpdf) parsepng(r io.Reader, readdpi bool) (info *ImageInfoType) {
 		f.err = err
 		return
 	}
-	return f.parsepngstream(buf, readdpi)
+	return f.parsepngstream(buf, readdpi, true)
 }
 
 func (f *Fpdf) readBeInt32(r io.Reader) (val int32) {
@@ -3107,7 +3107,7 @@ func (f *Fpdf) parsegif(r io.Reader) (info *ImageInfoType) {
 		f.err = err
 		return
 	}
-	return f.parsepngstream(pngBuf, false)
+	return f.parsepngstream(pngBuf, false, true)
 }
 
 // newobj begins a new object
